@@ -75,7 +75,9 @@ window.onload = async function() {
     }
 
     document.getElementById("account-body").innerHTML = html;
-
+  
+    // add event remove expense item 
+    addEventForDeleteExpenseIcon();
   } else {
      // display total money
      let totalMoney = Object.values(data[0]);
@@ -83,8 +85,7 @@ window.onload = async function() {
   }
 
 
-  // add event remove expense item 
- addEventForDeleteExpenseIcon();
+
 
 
 }
@@ -197,7 +198,7 @@ document.querySelector("#save-expense").onclick = function() {
       let html = `<tr class="account-item" data-row-id=${id}>
                 <td class="account-item_info">${date}</td>
                 <td class="account-item_info">${formatNumberHasDot(expenseValue)}</td>
-                <td class="account-item_info delete-expense" style="padding:0px 8px">
+                <td class="account-item_info delete-expense" style="padding:0px 8px" data-id="${id}">
                    <img src="./delete.png" alt="" class="expense-item-delete-btn">
                 </td>  
             </tr>`
