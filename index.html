@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Ba Chế Em</title>
+</head>
+<body>
+    <div id="header" style="margin:16px 0px">
+        <h2 style="text-align: center;">3 chế em quản lí tiền</h2>
+        <div id="total-account">
+            <p for="" style="margin-right:4px;font-weight:bold">Tổng tiền: </p>
+            <p id="total-money" style="margin-right: 4px;">1.000.000 </p> VND
+            <i class="fa-solid fa-pencil" id="modify-total-money" onclick="showEnteringTotalMoneyForm()"></i>
+        </div>
+        <div id="enter-money">
+            <h3 id="enter-money_title">Nhập chi tiêu</h3>
+            <input type="text" id="enter-money_input" class="input" placeholder="Nhập chi tiêu">
+            <input type="date" id="date" class="input" placeholder="Nhập chi tiêu">
+            <button id="save-expense" class="btn">Lưu</button>
+        </div>
+    </div>
+    <table class="account-list" style="width: 100%;">
+        <thead>
+            <th class="thead" style="width:30%">
+                Ngày
+            </th>
+            <th class="thead" style="width:40%">
+                Tiền xài
+            </th>
+            <th class="thead" style="width:30%">
+                Controller
+            </th>
+        </thead>
+        <tbody id="account-body">
+            <!-- <tr class="account-item">
+                <td class="account-item_info">20-01-2021</td>
+                <td class="account-item_info">200.000</td>
+                <td class="account-item_info" style="padding:0px 8px">
+                   <img src="./delete.png" alt="" class="expense-item-delete-btn">
+                </td>  
+            </tr>
+            <tr class="account-item">
+                <td class="account-item_info">20-01-2021</td>
+                <td class="account-item_info">200.000</td>
+                <td class="account-item_info" style="padding:0px 8px">
+                   <img src="./delete.png" alt="" class="expense-item-delete-btn">
+                </td>  
+            </tr> -->
+        </tbody>
+    </table>
+
+    <div id="total-money-form">
+        <div id="overlay"></div>
+        <div id="total-money-form-body">
+            <img src="./close.png" alt="" id="close-btn">
+            <h3 id="total-money-form-body_title">Nhập tổng tiền</h3>
+            <input type="text" id="money-form-body_input" class="input" placeholder="Tổng tiền">
+            <div class="btn-wrap">
+                <button id="total-month-money">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js" type="module"></script>
+</body>
+</html>
